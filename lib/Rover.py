@@ -52,12 +52,19 @@ class Rover:
     time.sleep(tf)
     gpio.cleanup()
     
-
   def pivot_right(self, tf):
     gpio.output(13, False)
     gpio.output(15, True)
     gpio.output(7, False)
     gpio.output(11, True)
+    time.sleep(tf)
+    gpio.cleanup()
+
+  def stop(self, tf):
+    gpio.output(13, False)
+    gpio.output(15, False)
+    gpio.output(7, False)
+    gpio.output(11, False)
     time.sleep(tf)
     gpio.cleanup()
 

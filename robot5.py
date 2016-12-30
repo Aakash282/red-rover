@@ -6,4 +6,6 @@ from lib.sensor import distance
 import random
 
 for z in range(10):
-    autonomy()
+	rover = Rover()
+	rover.forward(.030)
+	rover.stop(.030)
