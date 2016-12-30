@@ -50,7 +50,8 @@ if __name__ == '__main__':
     m = sr.Microphone(device_index=4)
     print m.list_microphone_names()
     import pyaudio
-    print pyaudio.PyAudio().get_device_info_by_index(4)
+    for i in range(5):
+        print pyaudio.PyAudio().get_device_info_by_index(i)
 
     with m as source:
         # we only need to calibrate once, before we start listening
