@@ -5,26 +5,30 @@ from sensor import distance
 import random
 
 class Rover:
+  LEFT = [7, 15]
+  RIGHT = [11, 13]
   def __init__(self):
     gpio.setmode(gpio.BOARD)
-    gpio.setup(7, gpio.OUT)
-    gpio.setup(11, gpio.OUT)
-    gpio.setup(13, gpio.OUT)
-    gpio.setup(15, gpio.OUT)
+    for w in LEFT:
+      gpio.setup(w, gpio.OUT)
+    for w in RIGHT:
+      gpio.setup(w, gpio.OUT)
+    
 
   def clean(self):
     gpio.setmode(gpio.BOARD)
-    gpio.setup(7, gpio.OUT)
-    gpio.setup(11, gpio.OUT)
-    gpio.setup(13, gpio.OUT)
-    gpio.setup(15, gpio.OUT)
+
+    for w in LEFT:
+      gpio.setup(w, gpio.OUT)
+    for w in RIGHT:
+      gpio.setup(w, gpio.OUT)
 
   def forward(self, tf):
     self.clean()
-    gpio.output(7,  False)
-    gpio.output(11, True)
-    gpio.output(13, True)
-    gpio.output(15, False)
+    for w in LEFT:
+      gpio.output(w, True)
+    for w in RIGHT:
+      gpio.output(w, True)
     time.sleep(tf)
     gpio.cleanup()
 
