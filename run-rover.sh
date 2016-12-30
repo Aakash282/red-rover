@@ -1,6 +1,6 @@
 export PYTHONPATH=$PYTHONPATH:..
 export WATSON_STT_URL="https://stream.watsonplatform.net/speech-to-text/api"
-export WATSON_STT_PASSWORD="ciUEKKNzCcFG"
-export WATSON_STT_USERNAME="9a0c9b4d-255c-4597-b20d-a7640d8817b6"
+export WATSON_STT_PASSWORD="ar7a0zijrR2W"
+export WATSON_STT_USERNAME="c2d23aa2-2f0f-4d95-98e7-dddd398dbe7f"
 
 python robot5.py
