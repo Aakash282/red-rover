@@ -47,8 +47,8 @@ def rover_voice_control(transcript):
 
 if __name__ == '__main__':
     r = sr.Recognizer()
-    m = sr.Microphone()
-    print m.list_microphone_names()
+    m = sr.Microphone(device_index=4)
+    # print m.list_microphone_names()
 
     with m as source:
         # we only need to calibrate once, before we start listening
