@@ -12,7 +12,15 @@ class Rover:
     gpio.setup(13, gpio.OUT)
     gpio.setup(15, gpio.OUT)
 
+  def clean(self):
+    gpio.setmode(gpio.BOARD)
+    gpio.setup(7, gpio.OUT)
+    gpio.setup(11, gpio.OUT)
+    gpio.setup(13, gpio.OUT)
+    gpio.setup(15, gpio.OUT)
+
   def forward(self, tf):
+    self.clean()
     gpio.output(7,  False)
     gpio.output(11, True)
     gpio.output(13, True)
@@ -21,6 +29,7 @@ class Rover:
     gpio.cleanup()
 
   def reverse(self, tf):
+    self.clean()
     gpio.output(7,  True)
     gpio.output(11, False)
     gpio.output(13, False)
@@ -29,6 +38,7 @@ class Rover:
     gpio.cleanup()
 
   def turn_left(self, tf):
+    self.clean()
     gpio.output(7, True)
     gpio.output(11, True)
     gpio.output(13, True)
@@ -37,6 +47,7 @@ class Rover:
     gpio.cleanup()
 
   def turn_right(self, tf):
+    self.clean()
     gpio.output(7, False)
     gpio.output(13, False)
     gpio.output(15, False)
@@ -45,6 +56,7 @@ class Rover:
     gpio.cleanup()
 
   def pivot_left(self, tf):
+    self.clean()
     gpio.output(13, True)
     gpio.output(15, False)
     gpio.output(7, True)
@@ -53,6 +65,7 @@ class Rover:
     gpio.cleanup()
     
   def pivot_right(self, tf):
+    self.clean()
     gpio.output(13, False)
     gpio.output(15, True)
     gpio.output(7, False)
@@ -61,6 +74,7 @@ class Rover:
     gpio.cleanup()
 
   def stop(self, tf):
+    self.clean()
     gpio.output(13, False)
     gpio.output(15, False)
     gpio.output(7, False)
