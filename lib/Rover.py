@@ -8,8 +8,8 @@ class Rover:
   
   def __init__(self):
     gpio.setmode(gpio.BOARD)
-    self.RIGHT = [7, 15]
-    self.LEFT = [11, 13]
+    self.RIGHT = [7, 11]
+    self.LEFT = [13, 15]
     for w in self.LEFT:
       gpio.setup(w, gpio.OUT)
     for w in self.RIGHT:
