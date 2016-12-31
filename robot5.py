@@ -55,7 +55,7 @@ if __name__ == '__main__':
 
     with m as source:
         # we only need to calibrate once, before we start listening
-        r.adjust_for_ambient_noise(m) 
+        r.adjust_for_ambient_noise(source) 
 
     print("Give Rover Commands!")
     USERNAME = os.environ['WATSON_STT_USERNAME']
