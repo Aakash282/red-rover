@@ -47,7 +47,7 @@ def rover_voice_control(transcript):
 
 if __name__ == '__main__':
     r = sr.Recognizer()
-    m = sr.Microphone(device_index=0, sample_rate=1000)
+    m = sr.Microphone(device_index=0, sample_rate=1000, chunk=256)
     # print m.list_microphone_names()
     # import pyaudio
     # for i in range(5):
