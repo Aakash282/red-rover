@@ -7,10 +7,7 @@ import os
 import random
 import speech_recognition as sr
 
-# for z in range(10):
-#   rover = Rover()
-#   rover.forward(.030)
-# rover.stop(.030)
+
 
 def callback(recognizer, audio):
     # try:
@@ -46,24 +43,29 @@ def rover_voice_control(transcript):
                 rover.pivot_left(.050)
 
 if __name__ == '__main__':
-    r = sr.Recognizer()
-    m = sr.Microphone(device_index=0, sample_rate=512, chunk_size=256)
-    # print m.list_microphone_names()
-    # import pyaudio
-    # for i in range(5):
-    #     print pyaudio.PyAudio().get_device_info_by_index(i)
+    for z in range(10):
+        rover = Rover()
+        rover.forward(.030)
+    rover.stop(.030)
+    
+    # r = sr.Recognizer()
+    # m = sr.Microphone(device_index=0, sample_rate=512, chunk_size=256)
+    # # print m.list_microphone_names()
+    # # import pyaudio
+    # # for i in range(5):
+    # #     print pyaudio.PyAudio().get_device_info_by_index(i)
 
-    with m as source:
-        # we only need to calibrate once, before we start listening
-        r.adjust_for_ambient_noise(source) 
+    # with m as source:
+    #     # we only need to calibrate once, before we start listening
+    #     r.adjust_for_ambient_noise(source) 
 
-    print("Give Rover Commands!")
-    USERNAME = os.environ['WATSON_STT_USERNAME']
-    PASSWORD = os.environ['WATSON_STT_PASSWORD']
-    print "Bluemix Transcription: "
+    # print("Give Rover Commands!")
+    # USERNAME = os.environ['WATSON_STT_USERNAME']
+    # PASSWORD = os.environ['WATSON_STT_PASSWORD']
+    # print "Bluemix Transcription: "
 
-    audio = r.listen_in_background(m, callback)
+    # audio = r.listen_in_background(m, callback)
 
-    while True:
-        continue
+    # while True:
+    #     continue
         
