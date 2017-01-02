@@ -26,9 +26,9 @@ class Rover:
   def forward(self, tf):
     self.clean()
     for w in self.LEFT:
-      gpio.output(w, False)
-    for w in self.RIGHT:
       gpio.output(w, True)
+    for w in self.RIGHT:
+      gpio.output(w, False)
     time.sleep(tf)
     gpio.cleanup()
 
