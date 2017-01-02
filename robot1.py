@@ -8,7 +8,7 @@ gpio.setmode(gpio.BOARD)
 # gpio.setup(7,gpio.OUT)
 # gpio.setup(11,gpio.OUT)
 gpio.setup(13,gpio.OUT)
-gpio.setup(15,gpio.OUT)
+# gpio.setup(15,gpio.OUT)
 
 print 2
 # def forward_RIGHT():
@@ -19,7 +19,7 @@ print 2
 # gpio.output(15,True)
 
 gpio.output(13, True)
-gpio.output(15, True)
+# gpio.output(15, True)
 
 time.sleep(0.5)
 print 3
