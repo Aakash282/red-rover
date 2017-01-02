@@ -11,10 +11,10 @@ gpio.setup(13,gpio.OUT)
 gpio.setup(15,gpio.OUT)
 
 print 2
-gpio.output(7,True)
-gpio.output(11,True)
-gpio.output(13,True)
-gpio.output(15,True)
+gpio.output(7,.5)
+gpio.output(11,.5)
+gpio.output(13,.5)
+gpio.output(15,.5)
 
 time.sleep(0.5)
 print 3
