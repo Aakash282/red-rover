@@ -2,8 +2,8 @@
 import time
 import sys
 import os
-# from lib.Rover import Rover
-# from lib.sensor import distance
+from lib.Rover import Rover
+from lib.sensor import distance
 import random
 import speech_recognition as sr
 
