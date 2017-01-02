@@ -11,7 +11,7 @@ gpio.setup(11,gpio.OUT)
 # gpio.setup(15,gpio.OUT)
 
 print 2
-gpio.output(7,False)
+gpio.output(7,True)
 gpio.output(11,True)
 # gpio.output(13,False)
 # gpio.output(15,False)
