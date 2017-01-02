@@ -11,10 +11,15 @@ gpio.setup(13,gpio.OUT)
 gpio.setup(15,gpio.OUT)
 
 print 2
-gpio.output(7,True)
-gpio.output(11,False)
+# def forward_RIGHT():
+# 	gpio.output(7,True)
+# 	gpio.output(11,False)
+# def backward_RIGHT():
 # gpio.output(13,False)
 # gpio.output(15,False)
+
+gpio.output(13, True)
+gpio.output(15, False)
 
 time.sleep(0.5)
 print 3
